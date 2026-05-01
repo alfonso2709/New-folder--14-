@@ -1,11 +1,18 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Rock Paper Scissors</title>
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <title>Document</title>
+</head>
+<body>
+  
+  <title>Rock Paper Scissors</title>
+
+
 </head>
 
 <body class="text-center">
@@ -47,5 +54,40 @@
   </div>
 
   <script src="java.js"></script>
+
+   <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#instructionsModal">
+            Show Instructions
+        </button>
+
+
+        <!-- Modal -->
+        <div class="modal fade" id="instructionsModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="instructionsModalLabel" aria-hidden="false">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="instructionsModalLabel">How to Play <strong>Rock</strong>, <strong>Paper</strong>, <strong>Scissors</strong></h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        Rock, Paper, Scissors is a simple game for two players where both people pick one of three choices—rock, paper, or scissors—at the same time. Rock beats scissors, scissors beats paper, and paper beats rock. If both players pick the same thing, it’s a tie. Each time someone wins a round, they get 1 point, and the goal is to reach a set number of points or just play a certain number of rounds. To reset the game, you just set both players’ scores back to zero and clear their choices so you can start fresh.
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var instructionsModal = new bootstrap.Modal(document.getElementById('instructionsModal'));
+            instructionsModal.show();
+        });
+    </script>
+
 </body>
 </html>
